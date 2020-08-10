@@ -42,7 +42,6 @@ const App = props => {
 
     url = "https://api.spacexdata.com/v3/launches?limit=100" + filerByLaunch + "" + filerByLanding + "" + filerByYear
 
-    // console.log(url);
     Axios.get(url)
       .then((response) => {
         setIsLoading(false);
@@ -62,8 +61,6 @@ const App = props => {
     let yearBox = document.getElementsByClassName("btn");
     for (var a = 0; a < yearBox; a++) {
       yearBox[a].style.backgroundColor = "yellow"
-      // console.log(yearBox);
-      // document.getElementById(val).style.backgroundColor="yellow"
     }
   }, []);
 
@@ -73,10 +70,9 @@ const App = props => {
     setFilterYear(val);
 
     let yearBox = document.getElementsByClassName("btn");
-    for(var a=0; a<yearBox.length; a++){
-      yearBox[a].style.backgroundColor="#adf5ad";
-      // console.log(yearBox);
-       document.getElementById(val).style.backgroundColor="#a2a20c"
+    for (var a = 0; a < yearBox.length; a++) {
+      yearBox[a].style.backgroundColor = "#adf5ad";
+      document.getElementById(val).style.backgroundColor = "#a2a20c"
     }
 
 
@@ -86,10 +82,9 @@ const App = props => {
     let val = e.target.id;
     setLaunchStatus(val);
     let yearBox = document.getElementsByClassName("launchbtn");
-    for(var a=0; a<yearBox.length; a++){
-      yearBox[a].style.backgroundColor="#adf5ad";
-      // console.log(yearBox);
-       document.getElementById(val).style.backgroundColor="#a2a20c"
+    for (var a = 0; a < yearBox.length; a++) {
+      yearBox[a].style.backgroundColor = "#adf5ad";
+      document.getElementById(val).style.backgroundColor = "#a2a20c"
     }
   }
 
@@ -97,10 +92,9 @@ const App = props => {
     let val = e.target.id;
     setLandingStatus(val);
     let yearBox = document.getElementsByClassName("landbtn");
-    for(var a=0; a<yearBox.length; a++){
-      yearBox[a].style.backgroundColor="#adf5ad";
-      // console.log(yearBox);
-       document.getElementById(val).style.backgroundColor="#a2a20c"
+    for (var a = 0; a < yearBox.length; a++) {
+      yearBox[a].style.backgroundColor = "#adf5ad";
+      document.getElementById(val).style.backgroundColor = "#a2a20c"
     }
   }
 
@@ -130,13 +124,6 @@ const App = props => {
             <button id="2018" className="btn" onClick={onYearChange}>2018</button>
             <button id="2019" className="btn" onClick={onYearChange}>2019</button>
             <button id="2020" className="btn" onClick={onYearChange}>2020</button>
-{/* 
-            <div>
-              <div class="filter_Btn_Coniner">
-                    <input type="radio" name="radio" />
-                <div class="checkmark">2000</div>
-              </div>
-            </div> */}
           </div>
 
           <div>
@@ -191,7 +178,7 @@ const App = props => {
 
         </div>
         {/* List End */}
-          
+
       </div>
       <div className="txt_center"><b>Developed By</b>: Joginder Singh</div>
     </div>

@@ -43,11 +43,7 @@ const App = props => {
     url = "http://api.spacexdata.com/v3/launches?limit=100" + filerByLaunch + "" + filerByLanding + "" + filerByYear
 
     // console.log(url);
-    Axios.get(url, {
-      headers: {
-        'content-type': 'application/json'
-      }
-    })
+    Axios.get(url)
       .then((response) => {
         setIsLoading(false);
         setListData(response.data);

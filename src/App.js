@@ -40,7 +40,7 @@ const App = props => {
       filerByLanding = ""
     }
 
-    url = "http://api.spacexdata.com/v3/launches?limit=100" + filerByLaunch + "" + filerByLanding + "" + filerByYear
+    url = "https://api.spacexdata.com/v3/launches?limit=100" + filerByLaunch + "" + filerByLanding + "" + filerByYear
 
     // console.log(url);
     Axios.get(url)
